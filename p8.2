@@ -4,26 +4,20 @@ using namespace std;
 
 int main()
 {
-    int numbers[10];
-    int max, min;
-    for(int i=0;i<10;i++)
+    int A[5], B[5], C;
+    for(int i=0; i<5; i++)
     {
-        cin>>numbers[i];
+        cin>>A[i];
     }
-    max = numbers[0];
-    min = numbers[0];
-    for(int i=0;i<10;i++)
+    for(int i=0; i<5; i++)
     {
-        if(numbers[i]>max)
-        {
-            max = numbers[i];
-        }
-        if(numbers[i]<min)
-        {
-            min = numbers[i];
-        }
+        cin>>B[i];
     }
-    cout<<"Max: "<<max<<endl;
-    cout<<"Min: "<<min<<endl;
-
+    for(int i=0; i<5; i++)
+    {
+        C = A[i];
+        A[i] = B[i];
+        B[i] = C;
+        cout<<A[i]<< "\t" << B[i]<<endl;
+    }
 }
